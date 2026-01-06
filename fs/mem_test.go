@@ -16,9 +16,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hanwen/go-fuse/v2/fuse"
-	"github.com/hanwen/go-fuse/v2/internal/testutil"
-	"github.com/hanwen/go-fuse/v2/posixtest"
+	"github.com/seaweedfs/go-fuse/v2/fuse"
+	"github.com/seaweedfs/go-fuse/v2/internal/testutil"
+	"github.com/seaweedfs/go-fuse/v2/posixtest"
 )
 
 func testMount(t *testing.T, root InodeEmbedder, opts *Options) (string, *fuse.Server) {

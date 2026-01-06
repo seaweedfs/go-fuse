@@ -13,8 +13,8 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/hanwen/go-fuse/v2/fuse"
-	"github.com/hanwen/go-fuse/v2/internal/testutil"
+	"github.com/seaweedfs/go-fuse/v2/fuse"
+	"github.com/seaweedfs/go-fuse/v2/internal/testutil"
 	"golang.org/x/sys/unix"
 )
 

@@ -12,10 +12,10 @@ import (
 	"syscall"
 	"testing"
 
-	"github.com/hanwen/go-fuse/v2/fs"
-	"github.com/hanwen/go-fuse/v2/fuse"
-	"github.com/hanwen/go-fuse/v2/internal/testutil"
-	"github.com/hanwen/go-fuse/v2/posixtest"
+	"github.com/seaweedfs/go-fuse/v2/fs"
+	"github.com/seaweedfs/go-fuse/v2/fuse"
+	"github.com/seaweedfs/go-fuse/v2/internal/testutil"
+	"github.com/seaweedfs/go-fuse/v2/posixtest"
 )
 
 type testCase struct {

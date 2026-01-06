@@ -590,7 +590,7 @@ func (ms *Server) handleRequest(req *requestAlloc) Status {
 	req.inputBuf = req.inputBuf[:inSize]
 	req.outputBuf = req.outBuf[:outSize+int(sizeOfOutHeader)]
 	copy(req.outputBuf, zeroOutBuf[:])
-	if outPayloadSize > 0 {
+	if outPayloadSize > 0 && (!ms.opts.NoAllocForRead || h != getHandler(_OP_READ)) {
 		req.outPayload = ms.buffers.AllocBuffer(uint32(outPayloadSize))
 		req.bufferPoolOutputBuf = req.outPayload
 	}

@@ -304,6 +304,20 @@ type MountOptions struct {
 	// for more details.
 	SyncRead bool
 
+	// don't alloc buffer for read operation
+	NoAllocForRead bool
+
+	// EnableWriteback enables kernel writeback cache.
+	// This means that the kernel will buffer writes and send them to the
+	// filesystem in batches. This increases performance for small writes
+	// but can lead to data loss if the filesystem crashes.
+	EnableWriteback bool
+
+	// EnableAsyncDio enables the FUSE_CAP_ASYNC_DIO capability.
+	// This allows the kernel to submit multiple direct I/O requests
+	// asynchronously.
+	EnableAsyncDio bool
+
 	// DirectMount, if set, makes go-fuse first attempt to use syscall.Mount instead of
 	// fusermount to mount the filesystem. This will not update /etc/mtab
 	// but might be needed if fusermount is not available.

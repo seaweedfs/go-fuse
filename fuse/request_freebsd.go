@@ -1,3 +1,5 @@
+//go:build !windows
+
 package fuse
 
 const outputHeaderSize = 160

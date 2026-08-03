@@ -72,7 +72,7 @@ var (
 		{int64(os.O_SYNC), "SYNC"},
 		{int64(os.O_TRUNC), "TRUNC"},
 		{int64(syscall.O_CLOEXEC), "CLOEXEC"},
-		{int64(syscall.O_DIRECTORY), "DIRECTORY"},
+		{int64(o_DIRECTORY), "DIRECTORY"},
 	})
 	fuseOpenFlagNames = newFlagNames([]flagNameEntry{
 		{FOPEN_DIRECT_IO, "DIRECT"},

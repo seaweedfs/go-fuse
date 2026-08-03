@@ -6,11 +6,6 @@
 
 package fuse
 
-import (
-	"golang.org/x/sys/unix"
-)
+import "syscall"
 
-func writev(fd int, packet [][]byte) (n int, err error) {
-	n, err = unix.Writev(fd, packet)
-	return
-}
+const o_DIRECTORY = syscall.O_DIRECTORY

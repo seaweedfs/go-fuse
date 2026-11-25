@@ -119,6 +119,9 @@ func doInit(server *protocolServer, req *request) {
 	if server.opts.EnableAsyncDio {
 		kernelFlags |= CAP_ASYNC_DIO
 	}
+	if server.opts.EnableExportSupport {
+		kernelFlags |= input.Flags64() & CAP_EXPORT_SUPPORT
+	}
 
 	if server.opts.ExplicitDataCacheControl {
 		// we don't want CAP_AUTO_INVAL_DATA even if we cannot go into fully explicit mode

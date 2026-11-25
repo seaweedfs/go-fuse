@@ -328,6 +328,12 @@ type MountOptions struct {
 	// asynchronously.
 	EnableAsyncDio bool
 
+	// EnableExportSupport enables the FUSE_CAP_EXPORT_SUPPORT capability, so
+	// the kernel can decode a file handle whose inode it has evicted by
+	// sending LOOKUP with the name "." on the handle's node id, and find a
+	// directory's parent with "..". The file system must answer both.
+	EnableExportSupport bool
+
 	// DirectMount, if set, makes go-fuse first attempt to use syscall.Mount instead of
 	// fusermount to mount the filesystem. This will not update /etc/mtab
 	// but might be needed if fusermount is not available.
